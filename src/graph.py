@@ -136,7 +136,7 @@ def plot_day_wise_summary_no_projects(stats, filename="day_wise_stats.png"):
         y = info["y"]
         color = info["color"]
 
-        ellipse_height = width * 40
+        ellipse_height = width * 20
         radius = ellipse_height / 2
 
         # Shadow
