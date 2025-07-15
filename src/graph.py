@@ -95,7 +95,7 @@ def plot_day_wise_summary_no_projects(stats, filename="day_wise_stats.png"):
 
     text_color = "#757A7F"
     sns.set_theme(style="whitegrid")
-    colors = sns.color_palette("Spectral", len(df))
+    colors = sns.color_palette("Paired", len(df))
 
     fig, ax = plt.subplots(figsize=(10, 5))
 
