@@ -3,34 +3,29 @@ import seaborn as sns
 import pandas as pd
 from matplotlib.patches import FancyBboxPatch, Rectangle, Ellipse
 from matplotlib.ticker import FuncFormatter
+import os
 
 
 def plot_language_usage(
     start, end, time_spent, language_data, filename="lang_stats.png"
 ):
     # Styling colors
-    label_color = "#757A7F"         # Y-axis label color
-    annotation_color = "#757A7F"    # Text at end of bars
-    title_color = "#757A7F"         # Title color (darker for better contrast)
+    label_color = "#757A7F"         
+    annotation_color = "#757A7F"    
+    title_color = "#757A7F"        
 
-    # Prepare DataFrame
     df = pd.DataFrame(language_data, columns=["Language", "Percent", "Label"])
     df = df.sort_values("Percent", ascending=False).reset_index(drop=True)
 
-    # Define custom color palette
     colors = sns.color_palette("tab10", len(df))
 
-    # Set seaborn theme
     sns.set_theme(style="white")
     sns.set_color_codes("pastel")
 
-    # Create figure and axes
     fig, ax = plt.subplots(figsize=(8, 4))
 
-    # Base bar plot
     sns.barplot(data=df, x="Percent", y="Language", ax=ax, palette=colors)
 
-    # Replace bars with rounded FancyBboxPatch
     new_patches = []
     for i, patch in enumerate(reversed(ax.patches)):
         bb = patch.get_bbox()
@@ -49,7 +44,6 @@ def plot_language_usage(
     for patch in new_patches:
         ax.add_patch(patch)
 
-    # Add value annotations to end of bars
     for i, (percent, label) in enumerate(zip(df["Percent"], df["Label"])):
         ax.text(
             percent + 1, i,
@@ -59,10 +53,8 @@ def plot_language_usage(
             color=annotation_color,
         )
 
-    # Style y-axis labels
     ax.set_yticklabels(ax.get_yticklabels(), color=label_color, fontsize=12)
 
-    # Title: bold "Languages", followed by timeframe and duration
     ax.set_title(
         f"$\\bf{{Languages}}$\nFrom {start} to {end} • Duration: {time_spent}",
         color=title_color,
@@ -72,21 +64,20 @@ def plot_language_usage(
         fontweight = 'bold',
     )
 
-    # Remove axis ticks and labels
     ax.set_xlabel("")
     ax.set_ylabel("")
     ax.set_xticks([])
     ax.tick_params(axis="both", which="both", length=0)
 
-    # Extend x-limit slightly to avoid clipping annotations
     ax.set_xlim(0, max(df["Percent"]) + 10)
 
-    # Remove borders
     sns.despine(left=True, bottom=True)
 
-    # Final layout and save
     plt.tight_layout()
-    plt.savefig(filename, transparent=True)
+
+    os.makedirs("results",exist_ok= True)
+    output_path = os.path.join(os.getcwd(),"results",filename)
+    plt.savefig(output_path, transparent=True)
     plt.close()
 
 
@@ -194,4 +185,8 @@ def plot_day_wise_summary_no_projects(stats, filename="day_wise_stats.png"):
     sns.despine(left=True, bottom=True)
 
     plt.tight_layout()
-    plt.savefig(filename, dpi=300, transparent=True)
+
+    os.makedirs("results",exist_ok= True)
+    output_path = os.path.join(os.getcwd(),"results",filename)
+    plt.savefig(output_path, dpi=300, transparent=True)
+    plt.close()

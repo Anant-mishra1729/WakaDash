@@ -33,9 +33,9 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
           git pull --rebase --autostash
-          git add lang_stats.png
-          git add day_wise_stats.png
-          git add best_badge.svg
-          git add daily_avg_badge.svg
+          git add results/lang_stats.png
+          git add results/day_wise_stats.png
+          git add results/best_badge.svg
+          git add results/daily_avg_badge.svg
           git diff --cached --quiet || git commit -m "Update lang_stats.png"
           git push

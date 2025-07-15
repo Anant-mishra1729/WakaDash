@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+import os
 
 def create_wakatime_badge(daily_avg_sec: int, best_day_dict: dict):
     daily_avg = daily_avg_sec
@@ -23,10 +24,12 @@ def create_wakatime_badge(daily_avg_sec: int, best_day_dict: dict):
     best_response = requests.get(f"https://img.shields.io/badge/{best_label_encoded}-{best_color}?style=flat-square")
     best_response.raise_for_status()
 
-    with open("daily_avg_badge.svg", "wb") as f:
+    os.makedirs("results",exist_ok= True)
+
+    with open(os.path.join(os.getcwd(),"results","daily_avg_badge.svg"), "wb") as f:
         f.write(daily_avg_response.content)
 
-    with open("best_badge.svg", "wb") as f:
+    with open(os.path.join(os.getcwd(),"results","best_badge.svg"), "wb") as f:
         f.write(best_response.content)
 
 

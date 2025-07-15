@@ -1,20 +1,27 @@
-<img width="1000" height="353" alt="Wakadash (2)" src="https://github.com/user-attachments/assets/be7a3117-8b28-41d8-bccc-5c307a3292b2" />
+<img width="1000" height="353" alt="Wakadash (2)" src="media/Wakadash.png" />
 
 ## WakaDash
 
-Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistics and generates a charts (`lang_stats.png`). You can embed this visual breakdown anywhere - from your GitHub profile README to a personal portfolio.
+Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistics and generates  charts. You can embed this visual breakdown anywhere - from your GitHub profile README to a personal portfolio.
 
 
 <p align="center">
-  <img src="lang_stats.png" alt="WakaTime Language Usage Chart" width="600">
+  <img src="results/lang_stats.png" alt="WakaTime Language Usage Chart" width="600">
 </p>
 
 
 <p align="center">
-  <img src="day_wise_stats.png" alt="WakaTime Language Usage Chart" width="1000">
+  <img src="results/day_wise_stats.png" alt="Weekly usage summary Chart" width="1000">
 </p>
 
+## Badges
+<p align="left">
+  <img src="results/best_badge.svg" alt="Best badge" width="430">
+</p>
 
+<p align="left">
+  <img src="results/daily_avg_badge.svg" alt="Daily avg badge" width="300">
+</p>
 
 ##  Use This in Your Own Profile (Fork & Go!) 🍴
 
@@ -40,15 +47,15 @@ Click the "Fork" button in the top right of this page and fork it to your accoun
 
 2. Enable workflows if prompted
 
-<img width="757" height="466" alt="image" src="https://github.com/user-attachments/assets/61190920-0666-4dd1-8aeb-c464dfc2b233" />
+<img width="757" height="466" alt="image" src="media/ins1.png" />
 
-<img width="756" height="462" alt="image" src="https://github.com/user-attachments/assets/806885c2-dbeb-4118-887e-17eb286ea649" />
+<img width="756" height="462" alt="image" src="media/ins2.png" />
 
 
 4. The action will now run automatically once per day, and generate a new lang_stats.png
 or you can run it manually by clicking here.
 
-<img width="756" height="462" alt="image" src="https://github.com/user-attachments/assets/269c8af0-861c-4ebf-a412-de6d376e7c0a" />
+<img width="756" height="462" alt="image" src="media/ins3.png" />
 
 
 ### Step 5: Show It in Your GitHub Profile
