@@ -2,14 +2,14 @@
 
 ## WakaDash
 
-Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistics and generates  charts. You can embed this visual breakdown anywhere - from your GitHub profile README to a personal portfolio.
+Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistics and generates charts. You can embed this visual breakdown anywhere - from your GitHub profile README to a personal portfolio.
 
-
+## Language stats
 <p align="center">
   <img src="results/lang_stats.png" alt="WakaTime Language Usage Chart" width="600">
 </p>
 
-
+## Weekly stats
 <p align="center">
   <img src="results/day_wise_stats.png" alt="Weekly usage summary Chart" width="1000">
 </p>
@@ -65,9 +65,64 @@ In your Profile `Readme.md`, paste this:
 Replace `<your-username>` with your user-name.
 
 ```md
-![WakaTime Stats](https://raw.githubusercontent.com/<your-username>/WakaDash/main/lang_stats.png)
+![Language Stats](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/lang_stats.png)
+
+![Weekly Stats](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/day_wise_stats.png)
+
+![Best Day Badge](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/best_badge.svg)
+
+![Daily Avg Badge](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/daily_avg_badge.svg)
 
 ```
 
-✅ That's it! Every day your chart will auto-update with your latest WakaTime stats.
+ That's it! Every day your chart will auto-update with your latest WakaTime stats.
 
+## Configuration
+
+All stats are fully configurable by modifying the `config.json` file. Below are the customizable options:
+
+### Badges 
+Badges are powered by [Shields.io](https://shields.io/badges), so all customization options supported by Shields are available here.
+
+#### Colors
+You can customize the background color of the left and right parts of each badge using hex codes, RGB, RGBA, HSL, HSLA, or CSS named colors:
+
+```json
+"best_badge_right_color": "yellowgreen"
+"best_badge_left_color": "grey"
+"avg_badge_right_color": "tomato"
+"avg_badge_left_color": "grey"
+```
+
+#### Badge style
+Control the overall style of the badges.
+
+Available styles:
+
+* flat
+
+![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-blue?style=flat&labelColor=g)
+
+* flat-square (default)
+
+![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-red?style=flat-square&labelColor=g)
+
+
+* plastic
+
+![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-green?style=plastic&labelColor=g)
+
+
+* for-the-badge
+
+![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-lightgreen?style=for-the-badge&labelColor=g)
+
+
+* social
+
+![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-brown?style=social&labelColor=g)
+
+
+```json
+"badge_style": "flat-square"
+```
