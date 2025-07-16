@@ -1,5 +1,6 @@
 {
     "stats_range": "last_7_days",
+    "language_limit": 5,
     "badges": {
         "best_badge_right_color": "yellowgreen",
         "best_badge_left_color": "grey",

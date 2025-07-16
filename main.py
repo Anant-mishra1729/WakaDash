@@ -19,7 +19,7 @@ create_language_usage_chart(
     ).strftime("%d %B %Y"),
     datetime.strptime(stats["end"], "%Y-%m-%dT%H:%M:%SZ").strftime("%d %B %Y"),
     stats["human_readable_total_including_other_language"],
-    waka.languages(stats),
+    waka.languages(stats, config["language_limit"]),
 )
 
 # Weekly summary
