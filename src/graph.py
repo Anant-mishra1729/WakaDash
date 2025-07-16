@@ -6,13 +6,13 @@ from matplotlib.ticker import FuncFormatter
 import os
 
 
-def plot_language_usage(
+def create_language_usage_chart(
     start, end, time_spent, language_data, filename="lang_stats.png"
 ):
     # Styling colors
-    label_color = "#757A7F"         
-    annotation_color = "#757A7F"    
-    title_color = "#757A7F"        
+    label_color = "#757A7F"
+    annotation_color = "#757A7F"
+    title_color = "#757A7F"
 
     df = pd.DataFrame(language_data, columns=["Language", "Percent", "Label"])
     df = df.sort_values("Percent", ascending=False).reset_index(drop=True)
@@ -46,7 +46,8 @@ def plot_language_usage(
 
     for i, (percent, label) in enumerate(zip(df["Percent"], df["Label"])):
         ax.text(
-            percent + 1, i,
+            percent + 1,
+            i,
             f"{label} ({percent:.2f}%)",
             va="center",
             fontsize=12,
@@ -61,7 +62,7 @@ def plot_language_usage(
         fontsize=14,
         loc="left",
         pad=20,
-        fontweight = 'bold',
+        fontweight="bold",
     )
 
     ax.set_xlabel("")
@@ -75,13 +76,13 @@ def plot_language_usage(
 
     plt.tight_layout()
 
-    os.makedirs("results",exist_ok= True)
-    output_path = os.path.join(os.getcwd(),"results",filename)
+    os.makedirs("results", exist_ok=True)
+    output_path = os.path.join(os.getcwd(), "results", filename)
     plt.savefig(output_path, transparent=True)
     plt.close()
 
 
-def plot_day_wise_summary_no_projects(stats, filename="day_wise_stats.png"):
+def create_weekly_summary_chart(stats, filename="day_wise_stats.png"):
     dates = list(stats.keys())
     raw_usages = [sum(day.values()) for day in stats.values()]
     total_usage = sum(raw_usages)
@@ -186,7 +187,7 @@ def plot_day_wise_summary_no_projects(stats, filename="day_wise_stats.png"):
 
     plt.tight_layout()
 
-    os.makedirs("results",exist_ok= True)
-    output_path = os.path.join(os.getcwd(),"results",filename)
+    os.makedirs("results", exist_ok=True)
+    output_path = os.path.join(os.getcwd(), "results", filename)
     plt.savefig(output_path, dpi=300, transparent=True)
     plt.close()

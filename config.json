@@ -1,0 +1,10 @@
+{
+    "stats_range": "last_7_days",
+    "badges": {
+        "best_badge_right_color": "yellowgreen",
+        "best_badge_left_color": "grey",
+        "avg_badge_right_color": "tomato",
+        "avg_badge_left_color": "grey",
+        "badge_style": "flat-square"
+    }
+}
