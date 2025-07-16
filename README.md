@@ -85,6 +85,15 @@ Replace `<your-username>` with your user-name.
 
 All stats are fully configurable by modifying the `config.json` file. Below are the customizable options:
 
+### Wakatime stats range
+
+`last_7_days`, `last_30_days`, `last_6_months`, `last_year`, or `all_time`
+
+```json
+"stats_range": "last_7_days",
+```
+
+
 ### Badges 
 Badges are powered by [Shields.io](https://shields.io/badges), so all customization options supported by Shields are available here.
 
@@ -101,32 +110,40 @@ You can customize the background color of the left and right parts of each badge
 #### Badge style
 Control the overall style of the badges.
 
-Available styles:
-
-* flat
-
-![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-blue?style=flat&labelColor=g)
-
-* flat-square (default)
-
-![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-red?style=flat-square&labelColor=g)
-
-
-* plastic
-
-![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-green?style=plastic&labelColor=g)
-
-
-* for-the-badge
-
-![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-lightgreen?style=for-the-badge&labelColor=g)
-
-
-* social
-
-![Static Badge](https://img.shields.io/badge/Daily_average-25_mins-brown?style=social&labelColor=g)
-
 
 ```json
 "badge_style": "flat-square"
 ```
+
+Available styles:
+
+* `flat`
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Daily_average-25_mins-blue?style=flat" alt="Best badge" width="200">
+</p>
+
+* `flat-square` (default)
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Daily_average-25_mins-gold?style=flat-square" alt="Best badge" width="200">
+</p>
+
+* `plastic`
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Daily_average-25_mins-lightblue?style=plastic" alt="Best badge" width="200">
+</p>
+
+
+* `for-the-badge`
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Daily_average-25_mins-chartreuse?style=for-the-badge" alt="Best badge" width="200">
+</p>
+
+* `social`
+
+<p align="left">
+  <img src="https://img.shields.io/badge/Daily_average-25_mins-chartreuse?style=social" alt="Best badge" width="200">
+</p>
