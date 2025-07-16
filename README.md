@@ -25,9 +25,6 @@ Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistic
 
 <br />
 
----
-
-<br />
 
 ##  Use This in Your Own Profile
 
@@ -82,10 +79,6 @@ Replace `<your-username>` with your user-name.
 ```
 
  That's it! Every day your chart will auto-update with your latest WakaTime stats.
-
-<br />
-
----
 
 <br />
 
