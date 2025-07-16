@@ -25,7 +25,7 @@ Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistic
 
 ---
 
-##  Use This in Your Own Profile (Fork & Go!) 🍴
+##  Use This in Your Own Profile
 
 You can use WakaDash to show your own coding activity by just forking this repo and connecting your WakaTime account. Here's how:
 
