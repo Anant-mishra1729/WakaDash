@@ -23,6 +23,8 @@ Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistic
   <img src="results/daily_avg_badge.svg" alt="Daily avg badge" width="300">
 </p>
 
+---
+
 ##  Use This in Your Own Profile (Fork & Go!) 🍴
 
 You can use WakaDash to show your own coding activity by just forking this repo and connecting your WakaTime account. Here's how:
@@ -76,6 +78,8 @@ Replace `<your-username>` with your user-name.
 ```
 
  That's it! Every day your chart will auto-update with your latest WakaTime stats.
+
+---
 
 ## Configuration
 
