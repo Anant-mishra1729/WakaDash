@@ -7,7 +7,7 @@ import os
 
 
 def create_language_usage_chart(
-    start, end, time_spent, language_data, filename="lang_stats.png"
+    start, end, time_spent, language_data, filename="lang_stats.svg"
 ):
     # Styling colors
     label_color = "#757A7F"
@@ -78,7 +78,7 @@ def create_language_usage_chart(
 
     os.makedirs("results", exist_ok=True)
     output_path = os.path.join(os.getcwd(), "results", filename)
-    plt.savefig(output_path, transparent=True)
+    plt.savefig(output_path, format="svg", transparent=True)
     plt.close()
 
 
