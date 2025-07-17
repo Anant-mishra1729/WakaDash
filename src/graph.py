@@ -82,7 +82,7 @@ def create_language_usage_chart(
     plt.close()
 
 
-def create_weekly_summary_chart(stats, filename="day_wise_stats.png"):
+def create_weekly_summary_chart(stats, filename="day_wise_stats.svg"):
     dates = list(stats.keys())
     raw_usages = [sum(day.values()) for day in stats.values()]
     total_usage = sum(raw_usages)

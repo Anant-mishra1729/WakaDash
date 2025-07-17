@@ -6,12 +6,12 @@ Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistic
 
 ## Language stats
 <p align="center">
-  <img src="results/lang_stats.png" alt="WakaTime Language Usage Chart" width="800">
+  <img src="results/lang_stats.svg" alt="WakaTime Language Usage Chart" width="800">
 </p>
 
 ## Weekly stats
 <p align="center">
-  <img src="results/day_wise_stats.png" alt="Weekly usage summary Chart" width="1000">
+  <img src="results/day_wise_stats.svg" alt="Weekly usage summary Chart" width="1000">
 </p>
 
 ## Badges
@@ -55,7 +55,7 @@ Click the "Fork" button in the top right of this page and fork it to your accoun
 <img width="756" height="462" alt="image" src="media/ins2.png" />
 
 
-4. The action will now run automatically once per day, and generate a new lang_stats.png
+4. The action will now run automatically once per day, and generate a new lang_stats.svg
 or you can run it manually by clicking here.
 
 <img width="756" height="462" alt="image" src="media/ins3.png" />
@@ -68,9 +68,9 @@ In your Profile `Readme.md`, paste this:
 Replace `<your-username>` with your user-name.
 
 ```md
-![Language Stats](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/lang_stats.png)
+![Language Stats](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/lang_stats.svg)
 
-![Weekly Stats](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/day_wise_stats.png)
+![Weekly Stats](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/day_wise_stats.svg)
 
 ![Best Day Badge](https://raw.githubusercontent.com/<your-username>/WakaDash/main/results/best_badge.svg)
 
