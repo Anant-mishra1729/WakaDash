@@ -189,5 +189,5 @@ def create_weekly_summary_chart(stats, filename="day_wise_stats.svg"):
 
     os.makedirs("results", exist_ok=True)
     output_path = os.path.join(os.getcwd(), "results", filename)
-    plt.savefig(output_path, dpi=300, transparent=True)
+    plt.savefig(output_path, format="svg", dpi=300, transparent=True)
     plt.close()
