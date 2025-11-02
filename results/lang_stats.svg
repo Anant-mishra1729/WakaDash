@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2025-11-01T01:09:57.877843</dc:date>
+    <dc:date>2025-11-02T01:10:39.100000</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -325,7 +325,7 @@ Q 57.97495 267.873792 57.97495 239.436459
 L 57.97495 239.550208 
 Q 57.97495 211.112875 70.449851 211.112875 
 z
-" clip-path="url(#p1d584283ce)" style="fill: #2ca02c"/>
+" clip-path="url(#pbcf7f994db)" style="fill: #2ca02c"/>
    </g>
    <g id="patch_4">
     <path d="M 70.449851 140.019541 
@@ -338,7 +338,7 @@ Q 57.97495 196.780459 57.97495 168.343125
 L 57.97495 168.456875 
 Q 57.97495 140.019541 70.449851 140.019541 
 z
-" clip-path="url(#p1d584283ce)" style="fill: #ff7f0e"/>
+" clip-path="url(#pbcf7f994db)" style="fill: #ff7f0e"/>
    </g>
    <g id="patch_5">
     <path d="M 70.449851 68.926208 
@@ -351,16 +351,16 @@ Q 57.97495 125.687125 57.97495 97.249792
 L 57.97495 97.363541 
 Q 57.97495 68.926208 70.449851 68.926208 
 z
-" clip-path="url(#p1d584283ce)" style="fill: #1f77b4"/>
+" clip-path="url(#pbcf7f994db)" style="fill: #1f77b4"/>
    </g>
    <g id="line2d_1">
-    <path clip-path="url(#p1d584283ce)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
+    <path clip-path="url(#pbcf7f994db)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="line2d_2">
-    <path clip-path="url(#p1d584283ce)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
+    <path clip-path="url(#pbcf7f994db)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="line2d_3">
-    <path clip-path="url(#p1d584283ce)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
+    <path clip-path="url(#pbcf7f994db)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="text_4">
     <!-- 3 hrs 12 mins (57.96%) -->
@@ -1459,7 +1459,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="p1d584283ce">
+  <clipPath id="pbcf7f994db">
    <rect x="57.95" y="61.76" width="423.897128" height="213.28"/>
   </clipPath>
  </defs>
