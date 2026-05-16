@@ -4,6 +4,7 @@ import pandas as pd
 from matplotlib.patches import FancyBboxPatch, Rectangle, Ellipse
 from matplotlib.ticker import FuncFormatter
 import os
+import numpy as np
 
 
 def create_language_usage_chart(
@@ -16,15 +17,22 @@ def create_language_usage_chart(
 
     df = pd.DataFrame(language_data, columns=["Language", "Percent", "Label"])
     df = df.sort_values("Percent", ascending=False).reset_index(drop=True)
+    df["DisplayPercent"] = df["Percent"] ** 0.7
 
-    colors = sns.color_palette("tab10", len(df))
+    colors = sns.color_palette("Set2", len(df), desat=0.8)
 
     sns.set_theme(style="white")
     sns.set_color_codes("pastel")
 
     fig, ax = plt.subplots(figsize=(8, 4))
 
-    sns.barplot(data=df, x="Percent", y="Language", ax=ax, palette=colors)
+    sns.barplot(
+        data=df,
+        x="DisplayPercent",
+        y="Language",
+        ax=ax,
+        palette=colors,
+    )
 
     new_patches = []
     for i, patch in enumerate(reversed(ax.patches)):
@@ -33,10 +41,10 @@ def create_language_usage_chart(
             (bb.xmin, bb.ymin),
             abs(bb.width),
             abs(bb.height),
-            boxstyle="round,pad=-0.004,rounding_size=2",
+            boxstyle="round,pad=0,rounding_size=0.15",
             ec="none",
             fc=colors[len(df) - 1 - i],
-            mutation_aspect=0.2,
+            mutation_aspect=1,
         )
         patch.remove()
         new_patches.append(p_bbox)
@@ -44,25 +52,41 @@ def create_language_usage_chart(
     for patch in new_patches:
         ax.add_patch(patch)
 
-    for i, (percent, label) in enumerate(zip(df["Percent"], df["Label"])):
+    max_val = max(df["DisplayPercent"])
+
+    for i, (percent, display_percent, label) in enumerate(
+        zip(df["Percent"], df["DisplayPercent"], df["Label"])
+    ):
         ax.text(
-            percent + 1,
+            display_percent + max_val * 0.02,
             i,
             f"{label} ({percent:.2f}%)",
             va="center",
-            fontsize=12,
+            ha="left",
+            fontsize=10,
+            fontweight="medium",
             color=annotation_color,
         )
 
     ax.set_yticklabels(ax.get_yticklabels(), color=label_color, fontsize=12)
 
-    ax.set_title(
-        f"$\\bf{{Languages}}$\nFrom {start} to {end} • Duration: {time_spent}",
-        color=title_color,
-        fontsize=14,
-        loc="left",
-        pad=20,
+    ax.text(
+        0,
+        1.15,
+        "Languages",
+        transform=ax.transAxes,
+        fontsize=16,
         fontweight="bold",
+        color=title_color,
+    )
+
+    ax.text(
+        0,
+        1.03,
+        f"From {start} to {end} • Duration: {time_spent}",
+        transform=ax.transAxes,
+        fontsize=12,
+        color=annotation_color,
     )
 
     ax.set_xlabel("")
@@ -70,7 +94,8 @@ def create_language_usage_chart(
     ax.set_xticks([])
     ax.tick_params(axis="both", which="both", length=0)
 
-    ax.set_xlim(0, max(df["Percent"]) + 10)
+    max_val = max(df["DisplayPercent"])
+    ax.set_xlim(0, max_val * 1.25)
 
     sns.despine(left=True, bottom=True)
 
@@ -191,3 +216,28 @@ def create_weekly_summary_chart(stats, filename="day_wise_stats.svg"):
     output_path = os.path.join(os.getcwd(), "results", filename)
     plt.savefig(output_path, format="svg", dpi=300, transparent=True)
     plt.close()
+
+
+if __name__ == "__main__":
+    mock_language_data = [
+        ("Python", 42.35, "12 hrs 24 mins"),
+        ("Rust", 21.80, "6 hrs 23 mins"),
+        ("TypeScript", 14.10, "4 hrs 08 mins"),
+        ("Go", 8.75, "2 hrs 34 mins"),
+        ("C++", 5.40, "1 hr 35 mins"),
+        ("Shell", 3.20, "56 mins"),
+        ("Markdown", 2.10, "37 mins"),
+        ("YAML", 1.30, "22 mins"),
+    ]
+
+    start = "2026-05-01"
+    end = "2026-05-16"
+    time_spent = "28 hrs 59 mins"
+
+    create_language_usage_chart(
+        start=start,
+        end=end,
+        time_spent=time_spent,
+        language_data=mock_language_data,
+        filename="../results/lang_stats.svg",
+    )

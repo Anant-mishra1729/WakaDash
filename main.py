@@ -26,7 +26,7 @@ create_language_usage_chart(
 weekly_stats = waka.weekly_summary()
 create_weekly_summary_chart(weekly_stats)
 
-# Wakatime badga
+# Wakatime badges
 create_wakatime_badges(
     daily_avg_sec=stats["human_readable_daily_average"],
     best_day_dict=stats["best_day"],

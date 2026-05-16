@@ -1,4 +1,0 @@
-matplotlib==3.10.3
-pandas==2.3.1
-Requests==2.32.4
-seaborn==0.13.2
