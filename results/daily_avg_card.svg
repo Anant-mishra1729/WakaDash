@@ -1,0 +1,58 @@
+
+<svg
+    width="500"
+    height="130"
+    viewBox="0 0 500 130"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+>
+
+    <!-- Background -->
+    <rect
+        x="1"
+        y="1"
+        width="498"
+        height="128"
+        rx="18.200000000000003"
+        fill="#161B22"
+        stroke="#30363D"
+        stroke-width="1.2"
+    />
+
+    <!-- Accent bar -->
+    <rect
+        x="30.0"
+        y="23.4"
+        width="7.0"
+        height="83.2"
+        rx="3.5"
+        fill="#A5B4FC"
+    />
+
+    <!-- Title -->
+    <text
+        x="55.0"
+        y="44.2"
+        fill="#8B949E"
+        font-family="Inter, Segoe UI, sans-serif"
+        font-size="16.900000000000002"
+        font-weight="500"
+    >
+        Daily Average
+    </text>
+
+    <!-- Value -->
+    
+        <text
+            x="55.0"
+            y="91.0"
+            fill="#E6EDF3"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="31.2"
+            font-weight="700"
+        >
+            5 hrs 42 mins
+        </text>
+        
+
+</svg>

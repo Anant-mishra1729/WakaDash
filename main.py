@@ -2,8 +2,12 @@ from src.wakatime import WakaTimeClient
 from datetime import datetime, timedelta
 from src.graph import create_language_usage_chart, create_weekly_summary_chart
 from src.badge import create_wakatime_badges
+from src.stat_card import create_wakatime_summary_card
 import json
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 with open("config.json", "r") as config_file:
     config = json.load(config_file)
@@ -35,4 +39,17 @@ create_wakatime_badges(
     best_badge_left_color=config["badges"]["best_badge_left_color"],
     best_badge_right_color=config["badges"]["best_badge_right_color"],
     badge_style=config["badges"]["badge_style"],
+)
+
+# Stat cards
+create_wakatime_summary_card(
+    daily_avg=stats["human_readable_daily_average"],
+    best_day_dict=stats["best_day"],
+    theme="dark",
+)
+
+create_wakatime_summary_card(
+    daily_avg=stats["human_readable_daily_average"],
+    best_day_dict=stats["best_day"],
+    theme="light",
 )
