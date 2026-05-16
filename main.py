@@ -42,14 +42,33 @@ create_wakatime_badges(
 )
 
 # Stat cards
-create_wakatime_summary_card(
-    daily_avg=stats["human_readable_daily_average"],
-    best_day_dict=stats["best_day"],
-    theme="dark",
-)
+if config["stats_card_layout"] == "vertical":
+    create_wakatime_summary_card(
+        daily_avg=stats["human_readable_daily_average"],
+        best_day_dict=stats["best_day"],
+        theme="dark",
+    )
 
-create_wakatime_summary_card(
-    daily_avg=stats["human_readable_daily_average"],
-    best_day_dict=stats["best_day"],
-    theme="light",
-)
+    create_wakatime_summary_card(
+        daily_avg=stats["human_readable_daily_average"],
+        best_day_dict=stats["best_day"],
+        theme="light",
+    )
+else:
+    create_wakatime_summary_card(
+        daily_avg=stats["human_readable_daily_average"],
+        best_day_dict=stats["best_day"],
+        theme="dark",
+        layout="horizontal",
+        width=700,
+        height=180,
+    )
+
+    create_wakatime_summary_card(
+        daily_avg=stats["human_readable_daily_average"],
+        best_day_dict=stats["best_day"],
+        theme="light",
+        layout="horizontal",
+        width=700,
+        height=180,
+    )

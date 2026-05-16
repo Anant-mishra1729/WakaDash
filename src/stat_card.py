@@ -9,6 +9,7 @@ def create_wakatime_summary_card(
     width: int = 420,
     height: int = 300,
     theme: str = "dark",
+    layout: str = "vertical",
     output_file: str | None = None,
 ):
     best_day = datetime.strptime(
@@ -17,20 +18,21 @@ def create_wakatime_summary_card(
     ).strftime("%d %b %Y")
 
     best_day_time = best_day_dict["text"]
+
     themes = {
         "dark": {
-            "bg_color": "#121212",
+            "bg_color": "#1C1C1C",
             "border_color": "#30363D",
-            "title_color": "#A8A8A8",
-            "value_color": "#E6EDF3",
+            "title_color": "#9CA3AF",
+            "value_color": "#F5F7FA",
             "avg_accent": "#8A9DFF",
             "best_accent": "#92EFB4",
         },
         "light": {
-            "bg_color": "#FFFFFF",
+            "bg_color": "#F3F4F6",
             "border_color": "#D0D7DE",
             "title_color": "#57606A",
-            "value_color": "#1F2328",
+            "value_color": "#111827",
             "avg_accent": "#5B6EFF",
             "best_accent": "#2DA44E",
         },
@@ -38,6 +40,9 @@ def create_wakatime_summary_card(
 
     if theme not in themes:
         raise ValueError(f"Invalid theme '{theme}'. Use 'dark' or 'light'.")
+
+    if layout not in {"vertical", "horizontal"}:
+        raise ValueError(f"Invalid layout '{layout}'. Use 'vertical' or 'horizontal'.")
 
     colors = themes[theme]
 
@@ -51,15 +56,212 @@ def create_wakatime_summary_card(
     best_accent = colors["best_accent"]
 
     radius = 22
-    section_height = height / 2
 
-    avg_font_size = min(25, max(20, width / 14))
-    best_font_size = min(25, max(20, width / 14))
+    avg_font_size = min(26, max(18, width / 16))
+    best_font_size = min(24, max(16, width / 18))
 
-    # Default output filename
+    # -----------------------------
+    # Layout calculations
+    # -----------------------------
+    if layout == "vertical":
+        section_height = height / 2
+
+        divider = f"""
+        <line
+            x1="28"
+            y1="{section_height}"
+            x2="{width - 28}"
+            y2="{section_height}"
+            stroke="{border_color}"
+            stroke-width="1"
+        />
+        """
+
+        accents = f"""
+        <!-- Daily Average Accent -->
+        <rect
+            x="28"
+            y="32"
+            width="7"
+            height="{section_height - 64}"
+            rx="4"
+            fill="{avg_accent}"
+        />
+
+        <!-- Best Day Accent -->
+        <rect
+            x="28"
+            y="{section_height + 32}"
+            width="7"
+            height="{section_height - 64}"
+            rx="4"
+            fill="{best_accent}"
+        />
+        """
+
+        content = f"""
+        <!-- Daily Average -->
+        <text
+            x="52"
+            y="60"
+            fill="{title_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="17"
+            font-weight="500"
+        >
+            Daily Average
+        </text>
+
+        <text
+            x="52"
+            y=80"
+            fill="{value_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="{avg_font_size}"
+            font-weight="700"
+        >
+            {daily_avg}
+        </text>
+
+        <!-- Best Day -->
+        <text
+            x="52"
+            y="{section_height + 55}"
+            fill="{title_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="17"
+            font-weight="500"
+        >
+            Best Day
+        </text>
+
+        <text
+            x="52"
+            y="{section_height + 85}"
+            fill="{value_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="{best_font_size}"
+            font-weight="700"
+        >
+            {best_day_time}
+        </text>
+
+        <text
+            x="52"
+            y="{section_height + 112}"
+            fill="{title_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="15"
+            font-weight="500"
+        >
+            {best_day}
+        </text>
+        """
+
+    else:
+        section_width = width / 2
+
+        divider = f"""
+        <line
+            x1="{section_width}"
+            y1="28"
+            x2="{section_width}"
+            y2="{height - 28}"
+            stroke="{border_color}"
+            stroke-width="1"
+        />
+        """
+
+        accents = f"""
+        <!-- Left Accent -->
+        <rect
+            x="28"
+            y="36"
+            width="7"
+            height="{height - 72}"
+            rx="4"
+            fill="{avg_accent}"
+        />
+
+        <!-- Right Accent -->
+        <rect
+            x="{section_width + 28}"
+            y="36"
+            width="7"
+            height="{height - 72}"
+            rx="4"
+            fill="{best_accent}"
+        />
+        """
+
+        content = f"""
+        <!-- Daily Average -->
+        <text
+            x="52"
+            y="70"
+            fill="{title_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="17"
+            font-weight="500"
+        >
+            Daily Average
+        </text>
+
+        <text
+            x="52"
+            y="110"
+            fill="{value_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="{avg_font_size}"
+            font-weight="700"
+        >
+            {daily_avg}
+        </text>
+
+        <!-- Best Day -->
+        <text
+            x="{section_width + 52}"
+            y="70"
+            fill="{title_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="17"
+            font-weight="500"
+        >
+            Best Day
+        </text>
+
+        <text
+            x="{section_width + 52}"
+            y="108"
+            fill="{value_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="{best_font_size}"
+            font-weight="700"
+        >
+            {best_day_time}
+        </text>
+
+        <text
+            x="{section_width + 52}"
+            y="132"
+            fill="{title_color}"
+            font-family="Inter, Segoe UI, sans-serif"
+            font-size="15"
+            font-weight="500"
+        >
+            {best_day}
+        </text>
+        """
+
+    # -----------------------------
+    # Default filename
+    # -----------------------------
     if output_file is None:
-        output_file = f"wakatime_summary_{theme}.svg"
+        output_file = f"wakatime_summary_{layout}_{theme}.svg"
 
+    # -----------------------------
+    # SVG
+    # -----------------------------
     svg = f"""
     <svg
         width="{width}"
@@ -81,83 +283,11 @@ def create_wakatime_summary_card(
             stroke-width="1.2"
         />
 
-        <!-- Divider -->
-        <line
-            x1="28"
-            y1="{section_height}"
-            x2="{width - 28}"
-            y2="{section_height}"
-            stroke="{border_color}"
-            stroke-width="1"
-        />
+        {divider}
 
-        <!-- Daily Average Accent -->
-        <rect
-            x="28"
-            y="32"
-            width="7"
-            height="{section_height - 64}"
-            rx="4"
-            fill="{avg_accent}"
-        />
+        {accents}
 
-        <!-- Best Day Accent -->
-        <rect
-            x="28"
-            y="{section_height + 32}"
-            width="7"
-            height="{section_height - 64}"
-            rx="4"
-            fill="{best_accent}"
-        />
-
-        <!-- Daily Average Title -->
-        <text
-            x="52"
-            y="58"
-            fill="{title_color}"
-            font-family="Inter, Segoe UI, sans-serif"
-            font-size="18"
-            font-weight="500"
-        >
-            Daily Average
-        </text>
-
-        <!-- Daily Average Value -->
-        <text
-            x="52"
-            y="98"
-            fill="{value_color}"
-            font-family="Inter, Segoe UI, sans-serif"
-            font-size="{avg_font_size}"
-            font-weight="700"
-        >
-            {daily_avg}
-        </text>
-
-        <!-- Best Day Title -->
-        <text
-            x="52"
-            y="{section_height + 58}"
-            fill="{title_color}"
-            font-family="Inter, Segoe UI, sans-serif"
-            font-size="18"
-            font-weight="500"
-        >
-            Best Day
-        </text>
-
-        <!-- Best Day Value -->
-        <text
-            x="52"
-            y="{section_height + 92}"
-            fill="{value_color}"
-            font-family="Inter, Segoe UI, sans-serif"
-            font-size="{best_font_size}"
-            font-weight="700"
-        >
-            {best_day_time + "  ●  " + best_day}
-        </text>
+        {content}
 
     </svg>
     """
@@ -185,6 +315,7 @@ if __name__ == "__main__":
             "text": "9 hrs 41 mins",
         },
         theme="dark",
+        layout="vertical",
     )
 
     create_wakatime_summary_card(
@@ -194,4 +325,7 @@ if __name__ == "__main__":
             "text": "9 hrs 41 mins",
         },
         theme="light",
+        layout="horizontal",
+        width=700,
+        height=180,
     )

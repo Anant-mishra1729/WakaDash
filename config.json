@@ -7,5 +7,6 @@
         "avg_badge_right_color": "tomato",
         "avg_badge_left_color": "grey",
         "badge_style": "flat-square"
-    }
+    },
+    "stats_card_layout": "horizontal"
 }
