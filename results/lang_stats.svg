@@ -6,11 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-<<<<<<< Updated upstream
-    <dc:date>2026-05-17T07:17:17.913836</dc:date>
-=======
-    <dc:date>2026-05-17T08:04:27.222521</dc:date>
->>>>>>> Stashed changes
+    <dc:date>2026-05-17T08:08:42.006108</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -563,11 +559,7 @@ Q 78.29 271.4184 78.29 265.986
 L 78.29 247.878 
 Q 78.29 242.4456 80.96663 242.4456 
 z
-<<<<<<< Updated upstream
-" clip-path="url(#p643a750493)" style="fill: #eacc44"/>
-=======
-" clip-path="url(#p14371043f7)" style="fill: #eacc44"/>
->>>>>>> Stashed changes
+" clip-path="url(#p27906ac3b4)" style="fill: #eacc44"/>
    </g>
    <g id="patch_4">
     <path d="M 80.96663 206.2296 
@@ -580,11 +572,7 @@ Q 78.29 235.2024 78.29 229.77
 L 78.29 211.662 
 Q 78.29 206.2296 80.96663 206.2296 
 z
-<<<<<<< Updated upstream
-" clip-path="url(#p643a750493)" style="fill: #a3cb61"/>
-=======
-" clip-path="url(#p14371043f7)" style="fill: #a3cb61"/>
->>>>>>> Stashed changes
+" clip-path="url(#p27906ac3b4)" style="fill: #a3cb61"/>
    </g>
    <g id="patch_5">
     <path d="M 80.96663 170.0136 
@@ -597,11 +585,7 @@ Q 78.29 198.9864 78.29 193.554
 L 78.29 175.446 
 Q 78.29 170.0136 80.96663 170.0136 
 z
-<<<<<<< Updated upstream
-" clip-path="url(#p643a750493)" style="fill: #de93c1"/>
-=======
-" clip-path="url(#p14371043f7)" style="fill: #de93c1"/>
->>>>>>> Stashed changes
+" clip-path="url(#p27906ac3b4)" style="fill: #de93c1"/>
    </g>
    <g id="patch_6">
     <path d="M 80.96663 133.7976 
@@ -614,11 +598,7 @@ Q 78.29 162.7704 78.29 157.338
 L 78.29 139.23 
 Q 78.29 133.7976 80.96663 133.7976 
 z
-<<<<<<< Updated upstream
-" clip-path="url(#p643a750493)" style="fill: #93a2c5"/>
-=======
-" clip-path="url(#p14371043f7)" style="fill: #93a2c5"/>
->>>>>>> Stashed changes
+" clip-path="url(#p27906ac3b4)" style="fill: #93a2c5"/>
    </g>
    <g id="patch_7">
     <path d="M 80.96663 97.5816 
@@ -631,11 +611,7 @@ Q 78.29 126.5544 78.29 121.122
 L 78.29 103.014 
 Q 78.29 97.5816 80.96663 97.5816 
 z
-<<<<<<< Updated upstream
-" clip-path="url(#p643a750493)" style="fill: #ed9471"/>
-=======
-" clip-path="url(#p14371043f7)" style="fill: #ed9471"/>
->>>>>>> Stashed changes
+" clip-path="url(#p27906ac3b4)" style="fill: #ed9471"/>
    </g>
    <g id="patch_8">
     <path d="M 80.96663 61.3656 
@@ -648,47 +624,25 @@ Q 78.29 90.3384 78.29 84.906
 L 78.29 66.798 
 Q 78.29 61.3656 80.96663 61.3656 
 z
-<<<<<<< Updated upstream
-" clip-path="url(#p643a750493)" style="fill: #6fb9a2"/>
+" clip-path="url(#p27906ac3b4)" style="fill: #6fb9a2"/>
    </g>
    <g id="line2d_1">
-    <path clip-path="url(#p643a750493)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
+    <path clip-path="url(#p27906ac3b4)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="line2d_2">
-    <path clip-path="url(#p643a750493)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
+    <path clip-path="url(#p27906ac3b4)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="line2d_3">
-    <path clip-path="url(#p643a750493)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
+    <path clip-path="url(#p27906ac3b4)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="line2d_4">
-    <path clip-path="url(#p643a750493)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
+    <path clip-path="url(#p27906ac3b4)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="line2d_5">
-    <path clip-path="url(#p643a750493)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
+    <path clip-path="url(#p27906ac3b4)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="line2d_6">
-    <path clip-path="url(#p643a750493)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
-=======
-" clip-path="url(#p14371043f7)" style="fill: #6fb9a2"/>
-   </g>
-   <g id="line2d_1">
-    <path clip-path="url(#p14371043f7)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
-   </g>
-   <g id="line2d_2">
-    <path clip-path="url(#p14371043f7)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
-   </g>
-   <g id="line2d_3">
-    <path clip-path="url(#p14371043f7)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
-   </g>
-   <g id="line2d_4">
-    <path clip-path="url(#p14371043f7)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
-   </g>
-   <g id="line2d_5">
-    <path clip-path="url(#p14371043f7)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
-   </g>
-   <g id="line2d_6">
-    <path clip-path="url(#p14371043f7)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
->>>>>>> Stashed changes
+    <path clip-path="url(#p27906ac3b4)" style="fill: none; stroke: #424242; stroke-width: 2.25; stroke-linecap: round"/>
    </g>
    <g id="text_7">
     <!-- 6 hrs 45 mins (73.11%) -->
@@ -1506,11 +1460,7 @@ z
   </g>
  </g>
  <defs>
-<<<<<<< Updated upstream
-  <clipPath id="p643a750493">
-=======
-  <clipPath id="p14371043f7">
->>>>>>> Stashed changes
+  <clipPath id="p27906ac3b4">
    <rect x="78.29" y="57.744" width="449.9776" height="217.296"/>
   </clipPath>
  </defs>
