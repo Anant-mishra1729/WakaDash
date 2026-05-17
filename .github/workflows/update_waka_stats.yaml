@@ -2,8 +2,8 @@ name: Update WakaTime Stats Chart
 
 on:
   schedule:
-    - cron: "0 0 * * *"   # runs every day at midnight UTC
-  workflow_dispatch:       # allows manual triggering from GitHub UI
+    - cron: "0 0 * * *" # runs every day at midnight UTC
+  workflow_dispatch:
 
 jobs:
   update-stats:
@@ -18,24 +18,29 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
       - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+        run: uv sync
 
       - name: Generate charts
         env:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-        run: |
-          python main.py
+        run: uv run python main.py
 
       - name: Commit and push if changed
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
+
           git pull --rebase --autostash
+
           git add results/lang_stats.svg
           git add results/day_wise_stats.svg
           git add results/best_badge.svg
           git add results/daily_avg_badge.svg
-          git diff --cached --quiet || git commit -m "Update lang_stats.svg"
+
+          git diff --cached --quiet || git commit -m "Update WakaTime charts"
+
           git push
