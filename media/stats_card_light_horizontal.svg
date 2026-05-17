@@ -14,8 +14,8 @@
             width="698"
             height="178"
             rx="22"
-            fill="#1C1C1C"
-            stroke="#30363D"
+            fill="#F3F4F6"
+            stroke="#D0D7DE"
             stroke-width="1.2"
         />
 
@@ -25,7 +25,7 @@
             y1="28"
             x2="350.0"
             y2="152"
-            stroke="#30363D"
+            stroke="#D0D7DE"
             stroke-width="1"
         />
         
@@ -38,7 +38,7 @@
             width="7"
             height="108"
             rx="4"
-            fill="#8A9DFF"
+            fill="#5B6EFF"
         />
 
         <!-- Right Accent -->
@@ -48,7 +48,7 @@
             width="7"
             height="108"
             rx="4"
-            fill="#92EFB4"
+            fill="#2DA44E"
         />
         
 
@@ -57,7 +57,7 @@
         <text
             x="52"
             y="70"
-            fill="#9CA3AF"
+            fill="#57606A"
             font-family="Inter, Segoe UI, sans-serif"
             font-size="17"
             font-weight="500"
@@ -68,19 +68,19 @@
         <text
             x="52"
             y="110"
-            fill="#F5F7FA"
+            fill="#111827"
             font-family="Inter, Segoe UI, sans-serif"
             font-size="26"
             font-weight="700"
         >
-            5 hrs 8 mins
+            4 hrs 37 mins
         </text>
 
         <!-- Best Day -->
         <text
             x="402.0"
             y="70"
-            fill="#9CA3AF"
+            fill="#57606A"
             font-family="Inter, Segoe UI, sans-serif"
             font-size="17"
             font-weight="500"
@@ -91,7 +91,7 @@
         <text
             x="402.0"
             y="108"
-            fill="#F5F7FA"
+            fill="#111827"
             font-family="Inter, Segoe UI, sans-serif"
             font-size="24"
             font-weight="700"
@@ -102,7 +102,7 @@
         <text
             x="402.0"
             y="132"
-            fill="#9CA3AF"
+            fill="#57606A"
             font-family="Inter, Segoe UI, sans-serif"
             font-size="15"
             font-weight="500"

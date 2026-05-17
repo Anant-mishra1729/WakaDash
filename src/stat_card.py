@@ -114,7 +114,7 @@ def create_wakatime_summary_card(
 
         <text
             x="52"
-            y=80"
+            y="100"
             fill="{value_color}"
             font-family="Inter, Segoe UI, sans-serif"
             font-size="{avg_font_size}"
@@ -257,7 +257,7 @@ def create_wakatime_summary_card(
     # Default filename
     # -----------------------------
     if output_file is None:
-        output_file = f"wakatime_summary_{layout}_{theme}.svg"
+        output_file = f"stats_card_{theme}.svg"
 
     # -----------------------------
     # SVG

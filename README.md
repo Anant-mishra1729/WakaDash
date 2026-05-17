@@ -14,13 +14,33 @@ Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistic
   <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/results/day_wise_stats.svg" alt="Weekly usage summary Chart" width="1000">
 </p>
 
-## Badges
+## SVG cards
+
+### Horizontal 
+<p align="center">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/results/stats_card_light_horizontal.svg" alt="Weekly usage summary Chart" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/stats_card_dark_horizontal.svg" alt="Weekly usage summary Chart" width="1000">
+</p>
+
+### Vertical 
+<p align="center">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/results/stats_card_light_vertical.svg" alt="Weekly usage summary Chart" width="1000">
+</p>
+
+<p align="center">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/stats_card_dark_vertical.svg" alt="Weekly usage summary Chart" width="1000">
+</p>
+
+## Sheilds.io Badges
 <p align="left">
-  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/results/best_badge.svg" alt="Best badge" width="430">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/best_badge.svg" alt="Best badge" width="300">
 </p>
 
 <p align="left">
-  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/results/daily_avg_badge.svg" alt="Daily avg badge" width="300">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/results/daily_avg_badge.svg" alt="Daily avg badge" width="220">
 </p>
 
 <br />
