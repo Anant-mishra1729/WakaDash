@@ -18,20 +18,20 @@ Tool that fetches your weekly [WakaTime](https://wakatime.com/) coding statistic
 
 ### Horizontal 
 <p align="center">
-  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/results/stats_card_light_horizontal.svg" alt="Weekly usage summary Chart" width="1000">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/stats_card_light_horizontal.svg" alt="Weekly usage summary Chart" width="80%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/stats_card_dark_horizontal.svg" alt="Weekly usage summary Chart" width="1000">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/stats_card_dark_horizontal.svg" alt="Weekly usage summary Chart" width="80%">
 </p>
 
 ### Vertical 
 <p align="center">
-  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/results/stats_card_light_vertical.svg" alt="Weekly usage summary Chart" width="1000">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/stats_card_light_vertical.svg" alt="Weekly usage summary Chart" width="80%">
 </p>
 
 <p align="center">
-  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/stats_card_dark_vertical.svg" alt="Weekly usage summary Chart" width="1000">
+  <img src="https://github.com/Anant-mishra1729/WakaDash/raw/main/media/stats_card_dark_vertical.svg" alt="Weekly usage summary Chart" width="80%">
 </p>
 
 ## Sheilds.io Badges
